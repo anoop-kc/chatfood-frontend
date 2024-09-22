@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useDishList } from "../features";
 
 export default function DishList() {
@@ -8,8 +8,8 @@ export default function DishList() {
   //   call the function to set data to dishList in a use effect hook
   useEffect(() => {
     getDishList();
-    console.log(dishList);
   }, []);
+
   return (
     <div className="category-list">
       {/* categories loop */}
@@ -25,7 +25,7 @@ export default function DishList() {
                 <div>{dish.price}</div>
                 {dish?.photo && (
                   <div className="dish-image">
-                    <img src={dish.photo} alt="" />
+                    <img src={dish.photo} alt="" role="img" />
                   </div>
                 )}
               </div>
