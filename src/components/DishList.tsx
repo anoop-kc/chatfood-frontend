@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useDishList } from "../features";
+import DishPrice from "./DishPrice";
 
 export default function DishList() {
   // initialises a useDishList object
@@ -22,7 +23,10 @@ export default function DishList() {
               <div className="dish-details">
                 <div className="dish-title">{dish.name}</div>
                 <div className="dish-description">{dish.description}</div>
-                <div>{dish.price}</div>
+                <DishPrice
+                  price={dish.price}
+                  discountRate={dish.discount_rate}
+                />
                 {dish?.photo && (
                   <div className="dish-image">
                     <img src={dish.photo} alt="" role="img" />
