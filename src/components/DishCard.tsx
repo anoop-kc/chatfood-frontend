@@ -23,7 +23,7 @@ export default function DishCard({ dish_item }: DishCardProps) {
   };
 
   return (
-    <div className={styles.dish_card} onClick={(e) => addItemToCart(dish)}>
+    <div className={styles.dish_card} onClick={() => addItemToCart(dish)}>
       <div className={styles.dish_details}>
         <h4 className={styles.dish_title}>
           {getItemCountByItemId(dish.id)
@@ -32,7 +32,7 @@ export default function DishCard({ dish_item }: DishCardProps) {
           {dish.name}
         </h4>
         <div className={styles.dish_description}>
-          <StripText text={dish.description} limit={70} />
+          <StripText text={dish.description} limit={60} />
         </div>
         {(dish.stock?.availability || 0) <= getItemCountByItemId(dish.id) && (
           <p className={styles.sold_out_text}>Sold out</p>

@@ -4,7 +4,6 @@ import { CartContext } from "../App";
 import { describe, it, expect, vi, afterEach } from "vitest";
 import React from "react";
 import "@testing-library/jest-dom/vitest";
-import { mockedCartContextValue } from "./mocks";
 import { Dishitem } from "../interfaces";
 
 describe("DishCard Component", () => {

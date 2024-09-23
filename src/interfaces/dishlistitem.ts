@@ -7,12 +7,12 @@ export interface CategoryWithDish {
 export interface Dishitem {
   id: string;
   name: string;
-  url: string;
+  url?: string;
   price: number;
-  discount_rate: number;
+  discount_rate?: number;
   stock: Stock;
   description: string;
-  photo: string;
+  photo?: string;
   category_id: string;
 }
 
