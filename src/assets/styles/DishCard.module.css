@@ -1,0 +1,51 @@
+.dish_card {
+  border-bottom: 1px solid #f4f6f9;
+  display: flex;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.dish_details {
+  flex: 3;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.dish_image_container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.dish_image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  border: 1px solid #f4f6f9;
+}
+
+.dish_title {
+  color: #071c4d;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
+.dish_description {
+  color: #838da6;
+  font-size: 14px;
+  font-weight: 400;
+  padding-right: 3px;
+  text-align: justify;
+  margin-right: 10px;
+}
+
+.sold_out_text {
+  color: red;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}

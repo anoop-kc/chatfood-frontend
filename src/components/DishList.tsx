@@ -1,6 +1,8 @@
-import React, { useEffect } from "react";
-import { useDishList } from "../features";
-import DishPrice from "./DishPrice";
+import React, { createContext, useEffect } from "react";
+import { useCart, useDishList } from "../features";
+import DishCard from "./DishCard";
+
+export const CartContext = createContext({});
 
 export default function DishList() {
   // initialises a useDishList object
@@ -19,21 +21,7 @@ export default function DishList() {
           <h4 className="category-title">{category?.name}</h4>
           {/* dish card loop  */}
           {category?.items?.map((dish) => (
-            <div className="dish-card" key={`dish-${dish.id}`}>
-              <div className="dish-details">
-                <div className="dish-title">{dish.name}</div>
-                <div className="dish-description">{dish.description}</div>
-                <DishPrice
-                  price={dish.price}
-                  discountRate={dish.discount_rate}
-                />
-                {dish?.photo && (
-                  <div className="dish-image">
-                    <img src={dish.photo} alt="" role="img" />
-                  </div>
-                )}
-              </div>
-            </div>
+            <DishCard key={`dish-${dish.id}`} dish_item={dish} />
           ))}
           {/* End. dish card loop  */}
         </div>

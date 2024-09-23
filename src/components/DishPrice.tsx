@@ -1,19 +1,30 @@
 import Price from "./Price";
 import React from "react";
+import styles from "../assets/styles/DishPrice.module.css";
 
 interface DishPriceProps {
   price: number;
   discountRate: number;
+  currency: string;
 }
 
-export default function DishPrice({ price, discountRate }: DishPriceProps) {
+export default function DishPrice({
+  price,
+  discountRate,
+  currency,
+}: DishPriceProps) {
   return (
-    <div className="dish-price">
-      {discountRate ? <Price price={price - price * discountRate} /> : <></>}
+    <div className={styles.dish_price}>
+      {discountRate ? (
+        <Price price={price - price * discountRate} currency={currency} />
+      ) : (
+        <></>
+      )}
 
       <Price
-        className={discountRate ? "discounted" : "price-card"}
+        discounted={discountRate ? true : false}
         price={price}
+        currency={currency}
       />
     </div>
   );

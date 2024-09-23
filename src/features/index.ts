@@ -1,3 +1,4 @@
+import useCart from "./cart/hooks/use-cart";
 import useDishList from "./dishlist/hooks/use-dishlist";
 
-export { useDishList };
+export { useDishList, useCart };

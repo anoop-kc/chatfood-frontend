@@ -1,0 +1,13 @@
+.price {
+  font-weight: 600;
+  font-size: 14px;
+  color: #071c4d;
+  line-height: 21px;
+}
+
+.discounted {
+  margin-left: 30px;
+  font-weight: 400;
+  color: #838da6;
+  text-decoration: line-through;
+}

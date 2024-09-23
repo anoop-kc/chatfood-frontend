@@ -4,7 +4,7 @@ export interface CategoryWithDish {
   items: Dishitem[];
 }
 
-interface Dishitem {
+export interface Dishitem {
   id: string;
   name: string;
   url: string;

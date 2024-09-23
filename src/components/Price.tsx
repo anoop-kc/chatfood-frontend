@@ -1,12 +1,22 @@
 import React from "react";
+import styles from "../assets/styles/Price.module.css";
 
 interface PriceProps {
   price: number;
-  className?: string;
+  discounted?: boolean;
+  currency: string;
 }
 
-export default function Price({ price, className }: PriceProps) {
+export default function Price({ price, discounted, currency }: PriceProps) {
   return (
-    <>{price > 0 && <div className={`price ${className}`}>{price}</div>}</>
+    <>
+      {price > 0 && (
+        <div
+          className={`${styles.price} ${discounted ? styles.discounted : ""}`}
+        >
+          {currency} {price}
+        </div>
+      )}
+    </>
   );
 }
