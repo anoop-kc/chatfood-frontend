@@ -62,3 +62,30 @@ npm run test:ui
 ```bash
 npm run test:c
 ```
+
+### Design Considerations
+
+- The framework used for the project is React with Typescript
+- The latest version of raact is used with vite as a build tool
+- Vitest + React Testing Library is used for writing and running unit tests
+- No third party javascript libraries were used
+- Component Hierarchy :
+
+```
+      - App
+        - Menu
+        - Header
+            - BackButton
+        - DishList
+            - SearchBox
+            - CategoryCard(s)
+              - DishCard(s)
+                  - StripText
+                  - DishPrice
+                    - Price
+```
+
+- The main design principles followed are component reusability, and decoupling of components.
+- useState was largely used for state management for some instances useContext was also used to share data and functions among components
+- CSS modules were used to style components. Individual components have their own styling files.
+- Units tests were used heavily to ensure the correct implementation of logic for each of the components
