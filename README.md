@@ -1,50 +1,64 @@
-# React + TypeScript + Vite
+# ChatFood | Powerful Mobile Ordering and Payments
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a mock project trying to simulate the menu page of Chatfood that list dishes by category.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Allows the user to filter the menu itms by typing in a search box
+- Clicking on a specific dish will add it to the cart
+- The cart can be reset by clicking on the back button
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+To get a local copy up and running, follow these steps:
 
-- Configure the top-level `parserOptions` property like this:
+### Prerequisites
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- [Node.js](https://nodejs.org/) (v14 or later).
+- It is recommended to create a node virtual environment if possible. However creating a virtual environment is not mandatory.
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/anoop-kc/chatfood-frontend.git
+   ```
+
+2. Navigate to the project directory:
+
+```bash
+cd chatfood-frontend
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+3. Install dependencies:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+```bash
+npm install
+```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### Scripts
+
+- Development: Start the development server (running the project)
+
+```bash
+npm run dev
+```
+
+- Test: Run tests using Vitest
+
+```bash
+npm run test
+```
+
+- Test UI: Open Vitest UI for interactive testing
+
+```bash
+npm run test:ui
+```
+
+- Test Coverage: Run tests with coverage reporting and UI
+
+```bash
+npm run test:c
 ```
