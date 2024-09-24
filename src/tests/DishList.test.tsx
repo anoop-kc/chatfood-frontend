@@ -27,7 +27,10 @@ vi.mock("../components/CategoryCard", () => ({
 }));
 
 describe("DishList Component", () => {
-  afterEach(cleanup);
+  afterEach(() => {
+    cleanup();
+    mockGetDishList.mockReset();
+  });
 
   const mockDishList = [
     {
@@ -55,9 +58,9 @@ describe("DishList Component", () => {
       getDishList: vi.fn(),
     });
   });
+  const mockGetDishList = vi.fn();
 
   it("calls getDishList on component mount", () => {
-    const mockGetDishList = vi.fn();
     (useDishList as vi.Mock).mockReturnValue({
       dishList: mockDishList,
       getDishList: mockGetDishList,

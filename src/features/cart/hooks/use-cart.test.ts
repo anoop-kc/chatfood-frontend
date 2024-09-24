@@ -77,6 +77,32 @@ describe("useCart Hook", () => {
     );
   });
 
+  it("should only increment item count if item the item id matches with the spplied id,  rest of the items in the cart shoud remain un changed", () => {
+    window.localStorage.setItem(
+      "cart",
+      JSON.stringify([
+        { itemId: "1", itemCount: 2 },
+        { itemId: "2", itemCount: 4 },
+      ])
+    );
+    const { result } = renderHook(() => useCart());
+
+    act(() => {
+      result.current.addToCart("1");
+    });
+
+    expect(result.current.cart).toEqual([
+      { itemId: "1", itemCount: 3 },
+      { itemId: "2", itemCount: 4 },
+    ]);
+    expect(window.localStorage.getItem("cart")).toEqual(
+      JSON.stringify([
+        { itemId: "1", itemCount: 3 },
+        { itemId: "2", itemCount: 4 },
+      ])
+    );
+  });
+
   it("should clear the cart", () => {
     window.localStorage.setItem(
       "cart",

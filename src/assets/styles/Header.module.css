@@ -1,0 +1,14 @@
+.header_container {
+  display: flex;
+  justify-content: space-between; /* This distributes space between the two items */
+  align-items: center; /* This ensures both items are vertically aligned (optional) */
+  position: sticky;
+  top: 0;
+  background: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.back_button {
+  /* align-self: flex-start; */
+}

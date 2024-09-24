@@ -77,11 +77,6 @@ describe("useDishList hook", () => {
         name: "Category 1",
         items: [{ id: 101, name: "Dish 1", category_id: 1 }],
       },
-      {
-        id: 2,
-        name: "Category 2",
-        items: [],
-      },
     ]);
   });
 

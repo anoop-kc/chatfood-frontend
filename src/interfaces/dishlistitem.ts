@@ -10,7 +10,7 @@ export interface Dishitem {
   url?: string;
   price: number;
   discount_rate?: number;
-  stock: Stock;
+  stock?: Stock;
   description: string;
   photo?: string;
   category_id: string;

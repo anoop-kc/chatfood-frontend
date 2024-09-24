@@ -1,4 +1,4 @@
-import { CartContext } from "../App";
+import { CartContext } from "./Menu";
 import { Dishitem } from "../interfaces";
 import DishPrice from "./DishPrice";
 import React, { useContext, useState } from "react";
@@ -23,7 +23,11 @@ export default function DishCard({ dish_item }: DishCardProps) {
   };
 
   return (
-    <div className={styles.dish_card} onClick={() => addItemToCart(dish)}>
+    <div
+      className={styles.dish_card}
+      onClick={() => addItemToCart(dish)}
+      title="Click to add to cart"
+    >
       <div className={styles.dish_details}>
         <h4 className={styles.dish_title}>
           {getItemCountByItemId(dish.id)
@@ -39,7 +43,7 @@ export default function DishCard({ dish_item }: DishCardProps) {
         )}
         <DishPrice
           price={dish.price}
-          discountRate={dish.discount_rate}
+          discountRate={dish.discount_rate || 0}
           currency={currency}
         />
       </div>
@@ -49,7 +53,7 @@ export default function DishCard({ dish_item }: DishCardProps) {
           <img
             className={styles.dish_image}
             src={dish.photo}
-            alt=""
+            alt={dish.name}
             role="img"
           />
         </div>

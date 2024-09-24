@@ -37,11 +37,13 @@ function useDishList() {
         );
       });
       //   appends the formatted category item to the dishListData array
-      dishListData.push({
-        id: category.id,
-        name: category.name,
-        items: dishItems,
-      });
+      if (dishItems.length) {
+        dishListData.push({
+          id: category.id,
+          name: category.name,
+          items: dishItems,
+        });
+      }
     }
     //  .End for loop
 

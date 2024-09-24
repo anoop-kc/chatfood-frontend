@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-interface CartItem {
+export interface CartItem {
   itemId: string;
   itemCount: number;
 }
