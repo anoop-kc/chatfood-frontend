@@ -31,6 +31,7 @@ vi.mock("../features/cart/hooks/use-cart", () => ({
 }));
 
 describe("Menu Component", () => {
+  // cleaning up the render residues
   afterEach(cleanup);
 
   it("should render Header with correct props", () => {

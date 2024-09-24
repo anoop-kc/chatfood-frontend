@@ -16,11 +16,16 @@ describe("SearchBox", () => {
   beforeEach(() => {
     vi.useFakeTimers();
   });
+
   afterEach(() => {
+    // cleaming up the render residues
     cleanup();
+    // cleaning up the mocked event handlers
     mockSearch.mockReset();
+    // clear all set timers
     vi.clearAllTimers();
   });
+
   it("renders correctly", () => {
     render(<SearchBox search={vi.fn()} />);
     expect(

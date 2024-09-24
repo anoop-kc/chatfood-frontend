@@ -6,6 +6,7 @@ import "@testing-library/jest-dom/vitest";
 
 describe("Price Component", () => {
   afterEach(() => {
+    // cleaning up the render residues
     cleanup();
   });
 

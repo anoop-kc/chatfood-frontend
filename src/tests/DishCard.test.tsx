@@ -36,7 +36,9 @@ const renderDishCard = (dish_item: Dishitem) => {
 
 describe("DishCard", () => {
   afterEach(() => {
+    // cleaning up the render residues
     cleanup();
+    // cleaning up the mocked event handlers
     mockAddToCart.mockReset();
   });
 

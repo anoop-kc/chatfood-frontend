@@ -6,6 +6,7 @@ import "@testing-library/jest-dom/vitest";
 
 describe("DishPrice Component", () => {
   afterEach(() => {
+    // cleaming up the render residues
     cleanup();
   });
 

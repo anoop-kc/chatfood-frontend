@@ -6,6 +6,7 @@ import "@testing-library/jest-dom/vitest";
 
 describe("StripText Component", () => {
   afterEach(() => {
+    // clean up the render residues
     cleanup();
   });
   const longText = "This is a very long text for testing purposes.";

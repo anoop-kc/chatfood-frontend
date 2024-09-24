@@ -51,5 +51,25 @@
 }
 
 .dish_card:last-child {
-  border: none !important;
+  border: none;
+}
+
+@media all and (min-width: 768px) {
+  .dish_card {
+    border: 1px solid #d9dcdf;
+    display: flex;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    flex-basis: 30%;
+    background: #f4f6f9;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    flex-shrink: 1;
+    cursor: pointer;
+  }
+  .dish_card:last-child {
+    border: 1px solid #d9dcdf;
+  }
 }

@@ -8,6 +8,7 @@ import { CartItem } from "../features";
 
 describe("Cart Component", () => {
   afterEach(() => {
+    // cleaning up the render residues
     cleanup();
   });
 

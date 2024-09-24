@@ -7,6 +7,7 @@ interface PriceProps {
   currency: string;
 }
 
+/* This renders the price card with the currency info. If there is a discounted prop supplied, this will attach a spcial class to the card to emphasis the discount */
 export default function Price({ price, discounted, currency }: PriceProps) {
   return (
     <>

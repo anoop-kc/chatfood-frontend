@@ -28,7 +28,9 @@ vi.mock("../components/CategoryCard", () => ({
 
 describe("DishList Component", () => {
   afterEach(() => {
+    // cleaming up the render residues
     cleanup();
+    // cleaning up the mocked event handlers
     mockGetDishList.mockReset();
   });
 

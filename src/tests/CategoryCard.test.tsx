@@ -12,6 +12,7 @@ vi.mock("../components/DishCard", () => ({
 
 describe("CategoryCard Component", () => {
   afterEach(() => {
+    // cleaning up the render residues
     cleanup();
   });
   const mockCategory: CategoryWithDish = {
